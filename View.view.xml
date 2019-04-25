@@ -17,7 +17,8 @@
 				visibleRowCount="7"
 				enableCellFilter="{ui>/cellFilterOn}"
 				filter="filterPrice"
-				ariaLabelledBy="title">
+				ariaLabelledBy="title"
+				rowActionCount="1">
 				<toolbar>
 					<m:Toolbar>
 						<m:Title id="title" text="Products"></m:Title>
@@ -43,6 +44,13 @@
 							width="15rem"/>
 					</m:Toolbar>
 				</toolbar>
+				<rowActionTemplate>
+					<RowAction>
+						<items>
+							<RowActionItem id="Navigation" icon="sap-icon://navigation-right-arrow" press="onNavigation"/>
+						</items>
+					</RowAction>
+				</rowActionTemplate>
 				<columns>
 					<Column
 						width="11rem"
@@ -58,7 +66,9 @@
 						defaultFilterOperator="StartsWith">
 						<m:Label text="Category" />
 						<template>
-							<m:Text text="{Category}" wrapping="false" />
+							<m:ObjectIdentifier
+								text="{Category}"
+								title="{Category}"/>
 						</template>
 					</Column>
 					<Column width="9rem">

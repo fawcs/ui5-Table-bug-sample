@@ -4,9 +4,8 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	"sap/ui/core/format/DateFormat",
-	"sap/ui/table/sample/TableExampleUtils"
-], function(Controller, JSONModel, MessageToast, Filter, FilterOperator, DateFormat, TableExampleUtils) {
+	"sap/ui/core/format/DateFormat"
+], function(Controller, JSONModel, MessageToast, Filter, FilterOperator, DateFormat) {
 	"use strict";
 
 	return Controller.extend("sap.ui.table.sample.Filtering.Controller", {
@@ -160,7 +159,6 @@ sap.ui.define([
 		},
 
 		showInfo : function(oEvent) {
-			TableExampleUtils.showInfo(sap.ui.require.toUrl("sap/ui/table/sample/Filtering") + "/info.json", oEvent.getSource());
 		}
 
 	});
